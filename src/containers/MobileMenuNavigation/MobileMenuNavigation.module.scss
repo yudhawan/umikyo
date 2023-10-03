@@ -1,0 +1,51 @@
+@import '../../constants.module.scss';
+
+.container{
+    display: none;
+    @media only screen and (max-width: $tablet)  {
+        list-style: none;
+        padding: 0;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 80px;
+        align-items: center;
+        justify-content: space-between;
+        background: white;
+        box-shadow: 0px -1px 1px 0px rgba($color: $pink-2, $alpha: 0.3);
+    }
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+}
+.icon{
+    stroke: $pink;
+    width: 27px;
+    height: 27px;
+}
+.iconActive{
+    stroke: $pink;
+    stroke-width: 2px;
+    path{
+        stroke: $pink;
+        stroke-width: 2px;
+    }
+}
+.textMenu{
+    color: $pink;
+    text-transform: capitalize;
+    font-size: 14px;
+}
+.textMenuActive{
+    color: $pink;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
+}

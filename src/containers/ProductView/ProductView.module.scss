@@ -1,0 +1,7 @@
+@import '../../constants.module.scss';
+
+.main{
+    @include mainContainerDefault;
+    background: white;
+   
+}

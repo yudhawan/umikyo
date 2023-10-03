@@ -1,0 +1,89 @@
+@import '../../constants.module.scss';
+.mainContainer{
+    @include mainContainerDefault;
+}
+.container{
+    @include containerDefault;
+    gap: 36px;
+    @media only screen and (max-width: $tablet){
+        gap: 24px;
+    }
+}
+.title{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    p{
+        margin: 0;
+        text-transform: capitalize;
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 150%;
+        color: $pink;
+    }
+    @media only screen and (max-width: $tablet){
+        gap: 16px;
+        p{
+            font-size: 32px;
+        }
+    }
+}
+.icon{
+    width: 52px;
+    height: 52px;
+    stroke: $lilac;
+    @media only screen and (max-width: $tablet){
+        width: 32px;
+        height: 32px;
+    }
+}
+.productsContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    @media only screen and (max-width: $tablet){
+        gap: 8px;
+    }
+    h1{
+        color: $lilac;
+        margin: 0px;
+    }
+}
+.testimonyContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    h1{
+        color: $lilac;
+        margin:0px
+    }
+}
+.products{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+.testimonies{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+.switchContainer{
+    width: 100%;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+}
+.activeIcon{
+    border-bottom: 2px solid $lilac;
+}

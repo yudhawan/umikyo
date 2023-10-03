@@ -1,0 +1,51 @@
+$purple:#6F1AB6;
+$purple-2:#C780FA;
+$purple-3:#FF78F0;
+$purple-4:#A31ACB;
+$white:#FFFFFF;
+$yellow:#F5EA5A;
+$yellow-2:#FFFFD0;
+$green:#377D71;
+$red:#9D3C72;
+$black:#3D3C42;
+$black-2:#13041f;
+$grey-1:#9ca3af;
+$pink :#F688A1;
+$pink-2 :#FDC0C6;
+$pink-3 :#FEE7ED;
+$pink-4 : #F4E3F3;
+$lilac: #CAACD0;
+$lilac-2: #E7D1E5;
+$lilac-3: #A48DB3;
+
+
+@mixin mainContainerDefault{
+  @media only screen and (max-width: $tablet){
+    margin-top: 70px;
+    padding-bottom: 100px;
+  }
+  margin-top: 80px;
+  padding-bottom: 100px;
+  background-color: $white;
+}
+@mixin containerDefault{
+  display: flex;
+  flex-direction: column;
+  max-width: 1600px;
+  margin-inline: 180px;
+  margin-top: 36px;
+  @media only screen and (max-width: $medium){
+    margin-inline: 80px;
+  }
+  @media only screen and (max-width: $tablet){
+    margin-inline: 16px;
+    margin-top: 24px;
+  }
+}
+@mixin iconDesktop{
+  width: 30px;
+  height: 30px;
+}
+$mobile: 872px;
+$tablet: 1120px;
+$medium:1280px

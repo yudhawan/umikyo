@@ -1,0 +1,22 @@
+@import '../../constants.module.scss';
+
+.searchContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.search{
+    width: 800px;
+    height: 40px;
+    border: none;
+    padding-inline: 16px;
+    border-radius: 27px;
+    border: 1px solid $lilac;
+    @media only screen and (max-width: $tablet){
+        width: 80%;
+    }
+}
+.search:focus{
+    outline: none;
+}

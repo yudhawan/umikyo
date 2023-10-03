@@ -1,0 +1,14 @@
+@import '../../constants.module.scss';
+
+.container{
+    border: none;
+    margin: 0px;
+    background-color: $pink-3;
+    width: fit-content;
+    padding: 2px 8px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.category{
+    color: $grey-1;
+}
