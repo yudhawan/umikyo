@@ -3,8 +3,12 @@ import styles from './SellersPage.module.scss'
 import { SellersProp } from '@/types'
 
 async function getSellers() {
-    const data = await fetch(process.env.BASE_URL + '/users/getusers')
-    return data.json()
+    try {
+        const data = await fetch(process.env.BASE_URL + '/users/getusers')
+        return data.json()
+    } catch (error) {
+        console.log(error)
+    }
 }
 async function Sellers() {
     const sellers = await getSellers()
