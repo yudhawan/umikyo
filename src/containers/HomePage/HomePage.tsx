@@ -18,6 +18,9 @@ const HomePage = ({ banners }: { banners: bannerProp[] }) => {
   const dispatch = useDispatch<AppDispatch>()
   const [toggle, setToggle] = useState(true)
   const [dataTestimonies, setDataTestimonies] = useState<object[]>([])
+  useEffect(() => {
+    dispatch(getProducts())
+  }, [])
   return (
     <div className={styles.mainContainer}>
       <BannerImage data={banners} />
