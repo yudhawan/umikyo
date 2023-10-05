@@ -11,7 +11,7 @@ const BannerImage = ({ data }: { data: bannerProp[] }) => {
         {
           data?.map((val) =>
             <div className={styles.image} key={val.id}>
-              <Image src={val.image} alt='name' width={1024} height={800} />
+              <Image src={val.image} alt='name' width={1024} height={800} priority />
             </div>
           )
         }
