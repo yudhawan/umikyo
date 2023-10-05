@@ -1,18 +1,20 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 
 export const getCategories = createAsyncThunk('categoris/getCategories', async () => {
-    const response = await fetch(process.env.BASE_URL + '/category')
+    const response = await fetch(process.env.BASE_URL + '/getCategories')
     const data = await response.json()
     return data
 })
 
 export interface CategoriesState {
-    categories: object[]
+    categories: object[],
+    sub: object[]
     error: any,
 }
 
 const initialState: CategoriesState = {
     categories: [],
+    sub: [],
     error: null,
 }
 
@@ -22,7 +24,8 @@ export const categoriesSlice = createSlice({
     reducers: {},
     extraReducers: (builder) => {
         builder.addCase(getCategories.fulfilled, (state, action) => {
-            state.categories = action.payload
+            state.categories = action.payload?.categories
+            state.sub = action.payload?.sub
         })
     },
 })
