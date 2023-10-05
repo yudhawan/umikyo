@@ -5,6 +5,7 @@ import { SellersProp } from '@/types'
 async function getSellers() {
     try {
         const data = await fetch(process.env.BASE_URL + '/users/getusers')
+        if (!data.ok) return []
         return data.json()
     } catch (error) {
         console.log(error)
