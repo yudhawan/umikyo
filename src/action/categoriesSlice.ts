@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 
 export const getCategories = createAsyncThunk('categoris/getCategories', async () => {
-    const response = await fetch(process.env.BASE_URL + '/getCategories')
+    const response = await fetch(process.env.NEXT_PUBLIC_BASE_URL + '/api/getCategories')
     const data = await response.json()
     return data
 })

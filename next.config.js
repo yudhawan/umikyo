@@ -1,17 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     // output:'export',
-    // images: {
-    //   unoptimized:true,
-    //     remotePatterns: [
-    //       {
-    //         protocol: 'https',
-    //         hostname: process.env.URL,
-    //         port: '',
-    //         pathname: '/products/img/**',
-    //       },
-    //     ],
-    // },
+    images:{
+        domains:['res.cloudinary.com']
+    },
     // env:{
     //     BASE_URL: process.env.BASE_URL
     // }

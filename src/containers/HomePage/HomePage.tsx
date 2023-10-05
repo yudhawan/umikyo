@@ -11,9 +11,10 @@ import Testimonies from '../../components/Testimonies/Testimonies'
 import { AppDispatch, RootState, useRootSelector } from '@/app/store'
 import { getProducts } from '@/action/productSlice'
 import styles from './HomePage.module.scss'
+import { bannerProp } from '@/types'
 
 const HomePage = () => {
-  const [banner, setBanner] = useState<object[]>([])
+  const [banner, setBanner] = useState<bannerProp[]>([])
   const { products } = useRootSelector((state: RootState) => state.products)
   const dispatch = useDispatch<AppDispatch>()
   const [toggle, setToggle] = useState(true)
@@ -22,7 +23,7 @@ const HomePage = () => {
     dispatch(getProducts())
     setDataTestimonies([])
     async function getBanner() {
-      const response = await fetch(process.env.BASE_URL + '/dashboard/getbanners')
+      const response = await fetch(process.env.NEXT_PUBLIC_BASE_URL + '/api/getImagesByPage?page=home')
       const data = await response.json()
       setBanner(data)
     }

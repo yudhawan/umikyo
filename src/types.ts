@@ -20,9 +20,10 @@ export type IconProp = {
 export interface bannerProp {
     alt?: string,
     bg?: string,
-    id?: number,
+    id: number,
+    dir: string,
     link?: string,
-    name?: string,
+    image: string,
     position?: string,
     text?: string
 }

@@ -12,7 +12,7 @@ function Product({ category, description, grosir_min, grosir_price, id, images, 
         [styles.oneProductContainer]: oneProduct
       })}>
         <div className={cx(styles.imgContainer, { [styles.imgContainerOneProduct]: oneProduct })}>
-          <Image alt={product_name} src={process.env.BASE_URL + "/products/img/" + images} width={210} height={200} />
+          <Image alt={product_name} src={images} width={210} height={200} />
         </div>
         <div className={cx(styles.info, { [styles.infoOneProduct]: oneProduct })}>
           <div className={styles.infoBlock}>
@@ -29,7 +29,7 @@ function Product({ category, description, grosir_min, grosir_price, id, images, 
       </div>
         : <a href={oneProduct ? '' : `product/${product_name}`} className={cx(styles.cardContainer, classname)}>
           <div className={cx(styles.imgContainer)}>
-            <Image alt={product_name} src={process.env.BASE_URL + "/products/img/" + images} width={210} height={200} />
+            <Image alt={product_name} src={images} width={210} height={200} />
           </div>
           <div className={cx(styles.info)}>
             <div className={styles.infoBlock}>
